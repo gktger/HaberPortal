@@ -1,0 +1,149 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Index - Global News</title>
+    <link href="~/Content/css/common.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/style.css" rel="stylesheet" media="all" />
+    <link href="~/Content/css/skin.css" rel="stylesheet" media="all" />
+    <link rel="icon" href="~/Content/images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="~/Content/images/favicon.ico" type="image/x-icon" />
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write('<script src="js/jquery-1.7.1.min.js"><\/script>')</script>
+    <script src="~/Content/js/jquery-ui.min.js"></script>
+    <script src="~/Content/js/jquery.ad-gallery.pack.js"></script>
+    <script src="~/Content/js/jquery.anythingslider.min.js"></script>
+    <script src="~/Content/js/jquery.colorbox-min.js"></script>
+    <script src="~/Content/js/script.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/html5.js"></script>
+    <![endif]-->
+    @RenderSection("head", required: false);
+</head>
+<body class="two_sidebars">
+    <!--[if lte IE 8]><div id="ie_message"><div class="wrapper"><a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode"><img src="images/banner_ie.png" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."/></a></div></div><![endif]-->
+    <div id="wrapper">
+        <!-- header -->
+        <header>
+            <div id="above_header">
+                <div class="inner">
+                    <div class="region">
+                        <div id="block_header_time" class="block">
+                            <p>
+                                Today:
+                                <time datetime="2019-05-14" class="today">Salı, Mayıs 14, 2019</time>
+                                Last Update:
+                                <time datetime="2019-05-14" class="last_update">22:41</time>
+                            </p>
+                        </div>
+                        <div id="block_header_login" class="block">
+                            <p><a href="#">Giriş</a> | <a href="#">Kayıt Ol</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="header">
+                <div class="wrapper">
+                    <h1 id="logo"><a href="index.html" title="Home"><img src="~/Content/images/logo.png" alt="Global News" /></a></h1>
+                    <div class="region">
+                        <div id="block-search-form" class="block">
+                            <form method="post" action="/Arama/Ara">
+                                <div class="form-type-textfield">
+                                    <input type="text" class="form-text" name="txtAra" maxlength="128" size="15" value="Arama" placeholder="Arama" />
+                                </div>
+                                <div class="form-actions">
+                                    <input type="submit" class="form-submit" value="" />
+                                </div>
+                            </form>
+                        </div>
+                        <div id="block_header_rss" class="block">
+                            <p><a href="#" class="bg_rss rss">RSS Feed</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="under_header">
+                <div class="region">
+                    <div id="block_main_menu" class="block">
+                        <div class="inner">
+                            <nav>
+                                <ul>
+                                    <li class="first active"><a href="index.html"><span class="bg">Ana Sayfa</span></a></li>
+                                    <li><a href="fullwidth.html"><span class="bg">Sayfalar</span></a></li>
+                                    <li><a href="typography.html"><span class="bg">Son Dakika</span></a></li>
+                                    <li><a href="gallery_3columns.html"><span class="bg">Galeri</span></a></li>
+                                    <li><a href="#"><span class="bg">Dünya</span></a></li>
+                                    <li><a href="#"><span class="bg">Gündem</span></a></li>
+                                    <li><a href="#"><span class="bg">İş</span></a></li>
+                                    <li><a href="#"><span class="bg">Spor</span></a></li>
+                                    <li><a href="#"><span class="bg">Eğlence</span></a></li>
+                                    <li><a href="#"><span class="bg">Sağlık</span></a></li>
+                                    <li><a href="#"><span class="bg">Eğitim</span></a></li>
+                                    <li><a href="#"><span class="bg">Hava Durumu</span></a></li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    @*<div id="block_secondary_menu" class="block">
+                        <div class="inner">
+                            <ul>
+                                <li class="first active"><a href="index.html">Red</a></li>
+                                <li><a href="index_blue.html">Blue</a></li>
+                                <li><a href="index_orange.html">Orange</a></li>
+                                <li><a href="index_green.html">Green</a></li>
+                                <li><a href="index_grey.html">Grey</a></li>
+                                <li><a href="index_dark_blue.html">Dark Blue</a></li>
+                                <li><a href="index_dark_grey.html">Dark Grey</a></li>
+                                <li><a href="index_fixed_layout.html">Fixed Layout</a></li>
+                            </ul>
+                        </div>
+                    </div>*@
+                </div>
+            </div>
+        </header>
+        <!-- end header -->
+        @RenderBody()
+        <div id="scroll_to_top_wrapper">
+            <div class="wrapper"><a href="#" id="scroll_to_top">Scroll To Top</a></div>
+        </div>
+        <!-- footer -->
+        <footer>
+            <div class="region">
+                <div id="block_footer_menu" class="block">
+                    <nav>
+                        <ul>
+                            <li class="first active"><a href="index.html">Ana Sayfa</a></li>
+                            <li><a href="fullwidth.html">Sayfalar</a></li>
+                            <li><a href="typography.html">Son Dakika</a></li>
+                            <li><a href="gallery_3columns.html">Galeri</a></li>
+                            <li><a href="#">Dünya</a></li>
+                            <li><a href="#">Gündem</a></li>
+                            <li><a href="#">İş</a></li>
+                            <li><a href="#">Spor</a></li>
+                            <li><a href="#">Eğlence</a></li>
+                            <li><a href="#">Sağlık</a></li>
+                            <li><a href="#">Eğitim</a></li>
+                            <li><a href="#">Hava Durumu</a></li>
+                            <li><a href="#">Hakkımızda</a></li>
+                            <li><a href="contacts.html">İletişim</a></li>
+                            <li><a href="sitemap.html">Site Haritası</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div id="block_copyright" class="block">
+                    <p>Copyright &copy; 2019 Göktuğ ERÇALIŞKAN. Tüm Hakları Falan Filan.</p>
+                </div>
+            </div>
+        </footer>
+        <!-- end footer -->
+    </div>
+</body>
+
+</html>
+

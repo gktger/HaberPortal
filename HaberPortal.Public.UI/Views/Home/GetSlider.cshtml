@@ -1,0 +1,26 @@
+﻿
+@{
+    Layout = null;
+}
+@model IEnumerable<HaberPortal.Entity.Haber>
+<aside id="block_front_slider" class="block">
+    <div class="content ad-gallery">
+        <div class="ad-image-wrapper"></div>
+        <div class="ad-controls"></div>
+        <div class="ad-nav">
+            <div class="ad-thumbs">
+                <ul class="ad-thumb-list">
+                    @foreach (var haber in Model)
+                    {
+                        <li>
+                    <a href="@haber.ResimYol"><img src="@haber.KucukResimYol" title="@haber.Baslik.Substring(0,30) ..." alt="@haber.Ozet.Substring(0,45) ..." /></a>
+                        </li>
+                    }
+
+                    
+                
+                </ul>
+            </div>
+        </div>
+    </div>
+</aside>

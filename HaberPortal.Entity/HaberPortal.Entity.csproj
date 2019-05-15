@@ -4,14 +4,13 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D5F34647-7D25-403A-8523-95CED468D190}</ProjectGuid>
+    <ProjectGuid>{F9055A19-0B01-4C05-8603-BDC4E1A2541D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>HaberPortal.DAL</RootNamespace>
-    <AssemblyName>HaberPortal.DAL</AssemblyName>
+    <RootNamespace>HaberPortal.Entity</RootNamespace>
+    <AssemblyName>HaberPortal.Entity</AssemblyName>
     <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -50,14 +49,26 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="aspnet_Applications.cs" />
+    <Compile Include="aspnet_Membership.cs" />
+    <Compile Include="aspnet_Paths.cs" />
+    <Compile Include="aspnet_PersonalizationAllUsers.cs" />
+    <Compile Include="aspnet_PersonalizationPerUser.cs" />
+    <Compile Include="aspnet_Profile.cs" />
+    <Compile Include="aspnet_Roles.cs" />
+    <Compile Include="aspnet_SchemaVersions.cs" />
+    <Compile Include="aspnet_Users.cs" />
+    <Compile Include="aspnet_UsersInRoles.cs" />
+    <Compile Include="aspnet_WebEvent_Events.cs" />
+    <Compile Include="Etiket.cs" />
+    <Compile Include="Haber.cs" />
+    <Compile Include="HaberTip.cs" />
+    <Compile Include="Kategori.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="DataContext.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HaberPortal.Entity\HaberPortal.Entity.csproj">
-      <Project>{f9055a19-0b01-4c05-8603-bdc4e1a2541d}</Project>
-      <Name>HaberPortal.Entity</Name>
-    </ProjectReference>
+    <Compile Include="Resim.cs" />
+    <Compile Include="sysdiagrams.cs" />
+    <Compile Include="Yazar.cs" />
+    <Compile Include="Yorum.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -43,6 +43,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -1005,7 +1011,9 @@
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
@@ -1037,6 +1045,9 @@
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Home\GetSlider.cshtml" />
+    <Content Include="Views\Home\EnSonHaberler.cshtml" />
+    <Content Include="Views\Home\UstTab.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1049,6 +1060,20 @@
     <Folder Include="Content\images\Videos\" />
     <Folder Include="Models\" />
     <Folder Include="Views\Arama\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\HaberPortal.BLL\HaberPortal.BLL.csproj">
+      <Project>{6d54681c-93fb-4743-8fda-f5a59ad7e94f}</Project>
+      <Name>HaberPortal.BLL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaberPortal.DAL\HaberPortal.DAL.csproj">
+      <Project>{d5f34647-7d25-403a-8523-95ced468d190}</Project>
+      <Name>HaberPortal.DAL</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\HaberPortal.Entity\HaberPortal.Entity.csproj">
+      <Project>{f9055a19-0b01-4c05-8603-bdc4e1a2541d}</Project>
+      <Name>HaberPortal.Entity</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

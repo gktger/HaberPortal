@@ -1,15 +1,14 @@
-﻿using HaberPortal.Entity;
-using System;
-using System.Collections.Generic;
+﻿
+
+using HaberPortal.BLL;
 using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 
-namespace HaberPortal.Public.UI.Controllers
+namespace HaberlerPortal.Public.UI.Controllers
 {
     public class HomeController : Controller
     {
-        DataContext db = new DataContext();
+        
 
         public ActionResult Index()
         {
@@ -17,8 +16,8 @@ namespace HaberPortal.Public.UI.Controllers
         }
         public ActionResult GetSlider()
         {
-            var haberler = db.Haber.Where(x => x.HaberTip.Adi == "Manset").OrderByDescending(x => x.YayinTarihi).Take(10);
-            return View(haberler);
+            
+            return View(AnaSayfaBLL.MansetGetir());
         }
         public ActionResult EnSonHaberler()
         {

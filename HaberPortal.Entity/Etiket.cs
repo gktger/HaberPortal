@@ -15,7 +15,7 @@ namespace HaberPortal.Entity
             Haber = new HashSet<Haber>();
         }
 
-        public int Id { get; set; }
+        public int EtiketID { get; set; }
 
         [Required]
         [StringLength(100)]

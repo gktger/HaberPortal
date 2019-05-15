@@ -9,7 +9,7 @@ namespace HaberPortal.Entity
     [Table("Yorum")]
     public partial class Yorum
     {
-        public int id { get; set; }
+        public int YorumID { get; set; }
 
         public int HaberID { get; set; }
 

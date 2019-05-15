@@ -15,10 +15,10 @@
                 </ul>
             </div>
         </aside>
-        @Html.Partial("GetSlider")
-        @Html.Partial("EnSonHaberler")
+        @{Html.RenderAction("GetSlider");}
+            @Html.Partial("EnSonHaberler")
         @Html.Partial("UstTab")
-        
+
         <section id="block_editors_choice" class="block">
             <h3 class="block_title">Editor's choice</h3>
             <div class="content">

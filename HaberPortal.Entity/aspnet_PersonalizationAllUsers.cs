@@ -18,7 +18,5 @@ namespace HaberPortal.Entity
         public DateTime LastUpdatedDate { get; set; }
 
         public virtual aspnet_Paths aspnet_Paths { get; set; }
-
-        public virtual aspnet_Paths aspnet_Paths1 { get; set; }
     }
 }

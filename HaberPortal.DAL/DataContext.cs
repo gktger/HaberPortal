@@ -1,9 +1,10 @@
-namespace HaberPortal.Entity
+namespace HaberPortal.DAL
 {
     using System;
     using System.Data.Entity;
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Linq;
+    using HaberPortal.Entity;
 
     public partial class DataContext : DbContext
     {
@@ -20,7 +21,6 @@ namespace HaberPortal.Entity
         public virtual DbSet<aspnet_Profile> aspnet_Profile { get; set; }
         public virtual DbSet<aspnet_Roles> aspnet_Roles { get; set; }
         public virtual DbSet<aspnet_SchemaVersions> aspnet_SchemaVersions { get; set; }
-        public virtual DbSet<aspnet_Users> aspnet_Users { get; set; }
         public virtual DbSet<aspnet_UsersInRoles> aspnet_UsersInRoles { get; set; }
         public virtual DbSet<aspnet_WebEvent_Events> aspnet_WebEvent_Events { get; set; }
         public virtual DbSet<Etiket> Etiket { get; set; }
@@ -37,117 +37,25 @@ namespace HaberPortal.Entity
             modelBuilder.Entity<aspnet_Applications>()
                 .HasMany(e => e.aspnet_Membership)
                 .WithRequired(e => e.aspnet_Applications)
-                .HasForeignKey(e => e.ApplicationId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Applications>()
-                .HasMany(e => e.aspnet_Membership1)
-                .WithRequired(e => e.aspnet_Applications1)
-                .HasForeignKey(e => e.ApplicationId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<aspnet_Applications>()
                 .HasMany(e => e.aspnet_Paths)
                 .WithRequired(e => e.aspnet_Applications)
-                .HasForeignKey(e => e.ApplicationId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Applications>()
-                .HasMany(e => e.aspnet_Paths1)
-                .WithRequired(e => e.aspnet_Applications1)
-                .HasForeignKey(e => e.ApplicationId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<aspnet_Applications>()
                 .HasMany(e => e.aspnet_Roles)
                 .WithRequired(e => e.aspnet_Applications)
-                .HasForeignKey(e => e.ApplicationId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Applications>()
-                .HasMany(e => e.aspnet_Roles1)
-                .WithRequired(e => e.aspnet_Applications1)
-                .HasForeignKey(e => e.ApplicationId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Applications>()
-                .HasMany(e => e.aspnet_Users)
-                .WithRequired(e => e.aspnet_Applications)
-                .HasForeignKey(e => e.ApplicationId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Applications>()
-                .HasMany(e => e.aspnet_Users1)
-                .WithRequired(e => e.aspnet_Applications1)
-                .HasForeignKey(e => e.ApplicationId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<aspnet_Paths>()
                 .HasOptional(e => e.aspnet_PersonalizationAllUsers)
                 .WithRequired(e => e.aspnet_Paths);
 
-            modelBuilder.Entity<aspnet_Paths>()
-                .HasMany(e => e.aspnet_PersonalizationPerUser)
-                .WithOptional(e => e.aspnet_Paths)
-                .HasForeignKey(e => e.PathId);
-
-            modelBuilder.Entity<aspnet_Paths>()
-                .HasOptional(e => e.aspnet_PersonalizationAllUsers1)
-                .WithRequired(e => e.aspnet_Paths1);
-
-            modelBuilder.Entity<aspnet_Paths>()
-                .HasMany(e => e.aspnet_PersonalizationPerUser1)
-                .WithOptional(e => e.aspnet_Paths1)
-                .HasForeignKey(e => e.PathId);
-
             modelBuilder.Entity<aspnet_Roles>()
                 .HasMany(e => e.aspnet_UsersInRoles)
                 .WithRequired(e => e.aspnet_Roles)
-                .HasForeignKey(e => e.RoleId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Roles>()
-                .HasMany(e => e.aspnet_UsersInRoles1)
-                .WithRequired(e => e.aspnet_Roles1)
-                .HasForeignKey(e => e.RoleId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasOptional(e => e.aspnet_Membership)
-                .WithRequired(e => e.aspnet_Users);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasOptional(e => e.aspnet_Membership1)
-                .WithRequired(e => e.aspnet_Users1);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasMany(e => e.aspnet_PersonalizationPerUser)
-                .WithOptional(e => e.aspnet_Users)
-                .HasForeignKey(e => e.UserId);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasMany(e => e.aspnet_PersonalizationPerUser1)
-                .WithOptional(e => e.aspnet_Users1)
-                .HasForeignKey(e => e.UserId);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasOptional(e => e.aspnet_Profile)
-                .WithRequired(e => e.aspnet_Users);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasOptional(e => e.aspnet_Profile1)
-                .WithRequired(e => e.aspnet_Users1);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasMany(e => e.aspnet_UsersInRoles)
-                .WithRequired(e => e.aspnet_Users)
-                .HasForeignKey(e => e.UserId)
-                .WillCascadeOnDelete(false);
-
-            modelBuilder.Entity<aspnet_Users>()
-                .HasMany(e => e.aspnet_UsersInRoles1)
-                .WithRequired(e => e.aspnet_Users1)
-                .HasForeignKey(e => e.UserId)
                 .WillCascadeOnDelete(false);
 
             modelBuilder.Entity<aspnet_WebEvent_Events>()

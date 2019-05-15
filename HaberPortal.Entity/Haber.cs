@@ -17,14 +17,14 @@ namespace HaberPortal.Entity
             Etiket = new HashSet<Etiket>();
         }
 
-        public int id { get; set; }
+        public int HaberID { get; set; }
 
         [Required]
-        [StringLength(20)]
+        [StringLength(100)]
         public string Baslik { get; set; }
 
         [Required]
-        [StringLength(250)]
+        [StringLength(500)]
         public string Ozet { get; set; }
 
         [Required]
@@ -32,18 +32,16 @@ namespace HaberPortal.Entity
 
         public DateTime YayinTarihi { get; set; }
 
-        public Guid? YazarID { get; set; }
-
         public int KategoriID { get; set; }
 
         public int HaberTipID { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(300)]
         public string ResimYol { get; set; }
 
         [Required]
-        [StringLength(200)]
+        [StringLength(300)]
         public string KucukResimYol { get; set; }
 
         public int Goruntulenme { get; set; }

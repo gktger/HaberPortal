@@ -9,7 +9,7 @@ namespace HaberPortal.Entity
     [Table("Resim")]
     public partial class Resim
     {
-        public int Id { get; set; }
+        public int ResimID { get; set; }
 
         public int HaberID { get; set; }
 

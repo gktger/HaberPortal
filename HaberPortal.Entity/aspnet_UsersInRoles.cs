@@ -17,11 +17,5 @@ namespace HaberPortal.Entity
         public Guid RoleId { get; set; }
 
         public virtual aspnet_Roles aspnet_Roles { get; set; }
-
-        public virtual aspnet_Roles aspnet_Roles1 { get; set; }
-
-        public virtual aspnet_Users aspnet_Users { get; set; }
-
-        public virtual aspnet_Users aspnet_Users1 { get; set; }
     }
 }

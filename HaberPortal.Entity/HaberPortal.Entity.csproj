@@ -57,7 +57,6 @@
     <Compile Include="aspnet_Profile.cs" />
     <Compile Include="aspnet_Roles.cs" />
     <Compile Include="aspnet_SchemaVersions.cs" />
-    <Compile Include="aspnet_Users.cs" />
     <Compile Include="aspnet_UsersInRoles.cs" />
     <Compile Include="aspnet_WebEvent_Events.cs" />
     <Compile Include="Etiket.cs" />

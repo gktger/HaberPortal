@@ -17,7 +17,7 @@ namespace HaberPortal.Entity
             Yazar = new HashSet<Yazar>();
         }
 
-        public int id { get; set; }
+        public int KategoriID { get; set; }
 
         [Required]
         [StringLength(50)]

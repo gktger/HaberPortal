@@ -9,7 +9,7 @@ namespace HaberPortal.Entity
     [Table("Yazar")]
     public partial class Yazar
     {
-        public Guid id { get; set; }
+        public Guid YazarID { get; set; }
 
         [Required]
         [StringLength(50)]

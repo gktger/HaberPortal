@@ -8,24 +8,30 @@ namespace HaberlerPortal.Public.UI.Controllers
 {
     public class HomeController : Controller
     {
-        
+
 
         public ActionResult Index()
         {
             return View();
         }
-        public ActionResult GetSlider()
+        public ActionResult MansetGetir()
         {
-            
-            return View(AnaSayfaBLL.MansetGetir());
+            var model = AnaSayfaBLL.MansetGetir();
+            return View(model);
         }
         public ActionResult EnSonHaberler()
         {
-            return View();
+            var model = AnaSayfaBLL.EnsonHaberGetir();
+            return View(model);
         }
         public ActionResult UstTab()
         {
             return View();
         }
-            }
+        public ActionResult Tab_VideoGetir()
+        {
+
+            return View();
+        }
+    }
 }

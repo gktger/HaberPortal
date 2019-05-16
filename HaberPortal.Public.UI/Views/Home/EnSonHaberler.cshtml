@@ -4,32 +4,35 @@
 }
 
 @model IEnumerable<HaberPortal.Entity.Haber>
+
 <aside id="block_latest_headlines" class="block">
     <h3 class="block_title">Son Dakika</h3>
     <div class="content">
         <ul>
             @{
-            int sayac = 0;
+                int sayac = 0;
             }
             @foreach (var haber in Model)
             {
-                @if (sayac == 0)
+                if (sayac == 0)
                 {
-                    <li class="first"><a href="#">Integer rutrum ante eu lacus.</a></li>
+                    <li class="first"><a href="/Haber/Goster/@haber.Baslik/@haber.HaberID">@haber.Baslik</a></li>
                 }
-                else if (sayac==6)
+                else if (sayac == 6)
                 {
+                    <li class="last"><a href="/Haber/Goster/@haber.Baslik/@haber.HaberID">@haber.Baslik</a></li>
 
                 }
                 else
                 {
+                    <li><a href="/Haber/Goster/@haber.Baslik/@haber.HaberID">@haber.Baslik</a></li>
 
                 }
 
-        }
+            }
 
 
         </ul>
-        <p><a href="#" class="view_all"><span><span>Hepsi Gör</span></span></a></p>
+        <p><a href="/Haber/TumSonHaberler" class="view_all"><span><span>Hepsi Gör</span></span></a></p>
     </div>
 </aside>

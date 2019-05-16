@@ -15,9 +15,13 @@
                 </ul>
             </div>
         </aside>
-        @{Html.RenderAction("GetSlider");}
-            @Html.Partial("EnSonHaberler")
-        @Html.Partial("UstTab")
+        @{
+            Html.RenderAction("MansetGetir");
+            Html.RenderAction("EnSonHaberler");
+            @Html.RenderAction("UstTab")
+        }
+
+
 
         <section id="block_editors_choice" class="block">
             <h3 class="block_title">Editor's choice</h3>

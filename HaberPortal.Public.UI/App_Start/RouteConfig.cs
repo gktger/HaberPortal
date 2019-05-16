@@ -18,6 +18,13 @@ namespace HaberPortal.Public.UI
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional }
             );
+            routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
+
+            routes.MapRoute(
+                name: "Haber",
+                url: "{controller}/{action}/{baslik}/{id}",
+                defaults: new { controller = "Haber", action = "Goster", id = UrlParameter.Optional }
+            );
         }
     }
 }

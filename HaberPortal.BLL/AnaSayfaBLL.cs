@@ -19,5 +19,11 @@ namespace HaberPortal.BLL
             var haberler = db.Haber.Where(x => x.HaberTip.Adi == "Manset").OrderByDescending(x => x.YayinTarihi).Take(10);
             return haberler.ToList();
         }
+        public static List<Haber> EnsonHaberGetir()
+        {
+            var haberler = db.Haber.OrderByDescending(x => x.YayinTarihi).Take(7);
+            return haberler.ToList();
+        }
+       
     }
 }

@@ -46,6 +46,10 @@ namespace HaberPortal.Entity
 
         public int Goruntulenme { get; set; }
 
+        
+        [StringLength(300)]
+        public string VideoYol { get; set; }
+
         public virtual HaberTip HaberTip { get; set; }
 
         public virtual Kategori Kategori { get; set; }
